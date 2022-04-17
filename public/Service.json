@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "name": " Root Canal",
+        "price": "300",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/14/de00010-getting-started-on-root-canal-treatment.jpg"
+    },
+
+    {
+        "id": 1,
+        "name": " Root Canal",
+        "price": "300",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/14/de00010-getting-started-on-root-canal-treatment.jpg"
+    },
+
+    {
+        "id": 1,
+        "name": " Root Canal",
+        "price": "300",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/14/de00010-getting-started-on-root-canal-treatment.jpg"
+    }
+]
