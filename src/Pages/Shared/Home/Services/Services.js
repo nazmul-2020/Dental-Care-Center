@@ -1,24 +1,32 @@
-import React from 'react';
-import { Button, Card } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import Service from '../Service/Service';
 
 const Services = () => {
-    return (
-        <div className='container mt-5'>
-            <h3 className=''>My Services</h3> 
 
-            <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
-        </div>
-    );
+  const [services, SetServices] = useState([]);
+
+  useEffect(() => {
+    fetch('Service.json')
+      .then(res => res.json())
+      .then(data => SetServices(data))
+
+  }, [])
+
+  return (
+    <div className='container mt-5'>
+      <h3 className=''>My Services</h3>
+      <div className='row '>
+        {
+          services.map(service => <Service
+            key={service.id}
+            service={service}
+          ></Service>)
+        }
+      </div>
+
+
+    </div>
+  );
 };
 
 export default Services;
