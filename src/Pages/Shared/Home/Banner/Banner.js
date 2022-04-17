@@ -5,7 +5,7 @@ import './Banner.css'
 const Banner = () => {
     return (
         <div className='banner'>
-            <h2>Welcome to <span className='text-primary'>DentalCare Service</span></h2>
+            <h2 className='text-center'>Welcome to <span className='text-primary'>Dental Care Center</span></h2>
             <img src={banner} alt="" />
         </div>
     );
