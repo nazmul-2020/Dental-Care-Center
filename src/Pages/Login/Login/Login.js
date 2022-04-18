@@ -10,45 +10,42 @@ import './Login.css'
 const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
-    const navigate= useNavigate();
+    const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
-  
+
 
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
-      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-      if (loading || sending) {
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
-      if (user){
-          navigate(from, { replace: true })
-      }
+    if (user) {
+        navigate(from, { replace: true })
+    }
 
-      let errorElement;
-      if (error) {
-          errorElement = <div>
-              <p className='text-danger'>Error: {error?.message}</p>
-          </div>
-  
-      }
+    let errorElement;
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
 
     const handelSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value
         const password = passwordRef.current.value
-        signInWithEmailAndPassword(email,password)
+        signInWithEmailAndPassword(email, password)
     }
 
-    const  resetPassword= async()=>{
+    const resetPassword = async () => {
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email);
         alert('Sent email');
@@ -67,6 +64,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
+                {errorElement}
                 <Button className='w-75 mx-auto  d-block' variant="primary" type="submit">
                     Log In
                 </Button>

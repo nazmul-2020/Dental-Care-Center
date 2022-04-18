@@ -50,6 +50,7 @@ const SignUp = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" required />
                 </Form.Group>
+                
                 <Button className='w-75 mx-auto d-block' variant="primary" type="submit">
                    Sign Up
                 </Button>

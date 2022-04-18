@@ -12,9 +12,8 @@ const SocialLogin = () => {
     let errorElement;
 
     if (error ||githubUser) {
-        errorElement = <div>
-            <p className='text-danger'>Error: {error?.message} {githubError?.message}</p>
-        </div>
+        errorElement =  <p className='text-danger'>Error: {error?.message} {githubError?.message}</p>
+        
 
     }
 
