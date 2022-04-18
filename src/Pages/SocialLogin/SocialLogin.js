@@ -1,6 +1,26 @@
 import React from 'react';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const SocialLogin = () => {
+
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const navigate = useNavigate();
+
+    if (error) {
+        return (
+            <div>
+                <p className='text-danger'>Error: {error.message}</p>
+            </div>
+        );
+    }
+
+    if (user) {
+        return (
+            navigate('/home')
+        );
+    }
     return (
         <div>
             <div className='d-flex align-items-center'>
@@ -9,14 +29,14 @@ const SocialLogin = () => {
                 <div style={{ height: '1px' }} className='w-100 bg-primary'></div>
             </div>
             <div>
-            <div className=''>
-                <button className='btn btn-whit w-75 text-white mx-auto d-block my-3 bg-primary'>
-                    <span className='px-2'>Google Sign In</span>
-                </button>
-                <button  className='btn btn-whit w-75 mx-auto text-white d-block my-3 bg-primary'>
-                    <span className='px-2'>GitHub Sign In</span>
-                </button>
-            </div>
+                <div className=''>
+                    <button onClick={() => signInWithGoogle()} className='btn btn-whit w-75 text-white mx-auto d-block my-3 bg-primary'>
+                        <span className='px-2'>Google Sign In</span>
+                    </button>
+                    <button className='btn btn-whit w-75 mx-auto text-white d-block my-3 bg-primary'>
+                        <span className='px-2'>GitHub Sign In</span>
+                    </button>
+                </div>
             </div>
         </div>
     );
