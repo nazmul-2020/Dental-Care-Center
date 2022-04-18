@@ -4,5 +4,9 @@
 #### Website details
 * Personal website for a business.
 * This website uses authentication Google and email passwords.
-* Business services are mentioned
+* Business services are mentioned.
 * The user needs to log in to take in a component.
+
+
+#### Used Technology
+* Html5, css3, Bootstrap5, React router, React firebase hooks Firebase.
