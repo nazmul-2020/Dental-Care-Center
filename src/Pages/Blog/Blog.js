@@ -3,7 +3,7 @@ import { Accordion } from 'react-bootstrap';
 
 const Blog = () => {
     return (
-        <div className='w-50 mx-auto d-block'>
+        <div className='w-50 w-sm-100 mx-auto d-block'>
             <h2> My Blog</h2>
             <Accordion className=' p-3 rounded shadow-lg ' >
                 <Accordion.Item eventKey="0">

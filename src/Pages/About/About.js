@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div className='container mt-3'>
             <h3 className='text-center '>ABOUT ME</h3>
-            <div className=' row g-5 my-5  border border-success  shadow rounded'>
+            <div className=' row g-5 my-5   shadow rounded'>
                 <div className=' col-lg-6 col-md-12 d-flex d-flex align-items-center text-justify '>
                     <div>
                     <h3 className='text-center text-primary pt-3'>My Goal</h3>
@@ -15,7 +15,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='col-lg-6 col-md-12 px-5 mx-auto d-block'>
-                    <img className='w-75 ' src={about} alt="" />
+                    <img className='w-75 mb-1 ' src={about} alt="" />
 
                 </div>
 
