@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../../SocialLogin/SocialLogin';
 import './Login.css'
 
@@ -23,6 +24,10 @@ const Login = () => {
       ] = useSignInWithEmailAndPassword(auth);
 
       const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+      if (loading || sending) {
+        return <Loading></Loading>
+    }
 
       if (user){
           navigate(from, { replace: true })

@@ -11,10 +11,10 @@ const Service = ({ service }) => {
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Text>{description}</Card.Text>
+                    <Card.Text className='text-justify'><span className='font-weight-bold'>Description :</span> {description}</Card.Text>
                     <p>Price: {price}</p>
-                    <Link to='/checkout'>
-                    <Button className='w-75 d-block mx-auto' variant="primary">Details</Button>
+                    <Link className='text-decoration-none' to='/checkout'>
+                    <Button className='w-75 d-block mx-auto ' variant="primary">Details</Button>
                     </Link>
                 </Card.Body>
             </Card>
