@@ -7,6 +7,5 @@
 * Business services are mentioned.
 * The user needs to log in to take in a component.
 
-
 #### Used Technology
 * Html5, css3, Bootstrap5, React router, React firebase hooks Firebase.
